@@ -1,0 +1,86 @@
+@import "bourbon";
+@import "neat";
+
+$red: #FC0414;
+$max-width: em(960);
+$mercury: 'Mercury SSm A', 'Mercury SSm B';
+$verlag: 'Verlag A', 'Verlag B';
+
+
+h1, h2, h3, h3 {
+  font-family: $verlag;
+}
+
+.container {
+  @include outer-container;
+}
+header {
+  @include row;
+  margin-bottom: 2em;
+  .titles {
+    @include span-columns(6);
+    background-color: $red;
+    padding: 2em;
+    color: white;
+  }
+  h1 {
+    font-size: 4em;
+    margin: 0;
+    @include fill-parent;
+    float: left;
+  }
+
+  .subtitle {
+    font-family: $verlag;
+    font-weight: 400;
+    font-size: 1.5em;
+    @include fill-parent;
+    float: left;
+  }
+
+}
+
+nav {
+  @include span-columns(3);
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    font-family: $verlag;
+    font-weight: 700;
+    list-style: none;
+    padding: 0.5em 0;
+    margin: 0.5em 0;
+    a {
+      padding: 0.5em;
+      background: $red;
+      text-decoration: none;
+      color: white;
+      font-size: 1.2em;
+    }
+    a:hover {
+      background: black;
+    }
+  }
+  li:first-child {
+    margin: 0;
+  }
+}
+main {
+  @include span-columns(9);
+  background: #F9F9F9;
+  padding: 2em;
+  h2, h3, h4 {
+    color: $red;
+    margin: 0;
+    padding: 0;
+  }
+  h2 {
+    font-size: 2em;
+  }
+
+  p {
+    font-family: $mercury;
+  }
+}
